@@ -1,0 +1,192 @@
+body {
+    padding: 0px 0px; 
+    font: 18px Helvetica, Arial, sans-serif;
+}
+
+.purple-border textarea {
+    border: 1px solid #ba68c8;
+}
+.purple-border .form-control:focus {
+    border: 1px solid #ba68c8;
+    box-shadow: 0 0 0 0.2rem rgba(186, 104, 200, .25);
+}
+
+.entities {
+    line-height: 2; 
+}
+
+[data-entity] {
+    padding: 0.25em 0.35em;
+    margin: 0px 0.25em;
+    line-height: 1;
+    display: inline-block;
+    border-radius: 0.25em;
+    border: 1px solid; 
+}
+
+[data-entity]::after {
+    box-sizing: border-box;
+    content: attr(data-entity);
+    font-size: 0.6em;
+    line-height: 1;
+    padding: 0.35em;
+    border-radius: 0.35em;
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0px 0px 0.1rem 0.5rem; 
+}
+
+[data-entity][data-entity="author"] {
+    background: rgba(166, 226, 45, 0.2);
+    border-color: rgb(166, 226, 45); 
+}
+
+[data-entity][data-entity="author"]::after {
+    background: rgb(166, 226, 45); 
+}
+
+[data-entity][data-entity="title"] {
+    background: rgba(224, 0, 132, 0.2);
+    border-color: rgb(224, 0, 132); 
+}
+
+[data-entity][data-entity="title"]::after {
+    background: rgb(224, 0, 132); 
+}
+
+[data-entity][data-entity="booktitle"] {
+    background: rgba(67, 198, 252, 0.2);
+    border-color: rgb(67, 198, 252); 
+}
+
+[data-entity][data-entity="booktitle"]::after {
+    background: rgb(67, 198, 252); 
+}
+
+[data-entity][data-entity="abstract"] {
+    background: rgba(67, 198, 252, 0.2);
+    border-color: rgb(67, 198, 252); 
+}
+
+[data-entity][data-entity="abstract"]::after {
+    background: rgb(67, 198, 252); 
+}
+
+[data-entity][data-entity="year"] {
+    background: rgba(253, 151, 32, 0.2);
+    border-color: rgb(253, 151, 32); 
+}
+
+[data-entity][data-entity="year"]::after {
+    background: rgb(253, 151, 32); 
+}
+
+[data-entity][data-entity="journal"] {
+    background: rgba(253, 151, 32, 0.2);
+    border-color: rgb(253, 151, 32); 
+}
+
+[data-entity][data-entity="journal"]::after {
+    background: rgb(253, 151, 32); 
+}
+
+[data-entity][data-entity="pages"] {
+    background: rgba(142, 125, 255, 0.2);
+    border-color: rgb(142, 125, 255); 
+}
+
+[data-entity][data-entity="pages"]::after {
+    background: rgb(142, 125, 255); 
+}
+
+[data-entity][data-entity="organization"] {
+    background: rgba(255, 204, 0, 0.2);
+    border-color: rgb(255, 204, 0); 
+}
+
+[data-entity][data-entity="organization"]::after {
+    background: rgb(255, 204, 0); 
+}
+
+[data-entity][data-entity="volume"] {
+    background: rgba(255, 204, 0, 0.2);
+    border-color: rgb(255, 204, 0); 
+}
+
+[data-entity][data-entity="volume"]::after {
+    background: rgb(255, 204, 0); 
+}
+
+[data-entity][data-entity="number"] {
+    background: rgba(255, 0, 170, 0.2);
+    border-color: rgb(255, 0, 170); 
+}
+
+[data-entity][data-entity="number"]::after {
+    background: rgb(255, 0, 170); 
+}
+
+[data-entity][data-entity="date"] {
+    background: rgba(47, 187, 171, 0.2);
+    border-color: rgb(47, 187, 171); 
+}
+
+[data-entity][data-entity="date"]::after {
+    background: rgb(47, 187, 171); 
+}
+
+[data-entity][data-entity="note"] {
+    background: rgba(47, 187, 171, 0.2);
+    border-color: rgb(47, 187, 171); 
+}
+
+[data-entity][data-entity="note"]::after {
+    background: rgb(47, 187, 171); 
+}
+
+[data-entity][data-entity="url"] {
+    background: rgba(26, 175, 212, 0.2);
+    border-color: rgb(26, 175, 212); 
+}
+
+[data-entity][data-entity="url"]::after {
+    background: rgb(26, 175, 212); 
+}
+
+[data-entity][data-entity="O"] {
+    background: rgba(153, 153, 153, 0.2);
+    border-color: rgb(153, 153, 153); 
+}
+
+[data-entity][data-entity="O"]::after {
+    background: rgb(153, 153, 153); 
+}
+
+[data-entity][data-entity="quantity"] {
+    background: rgba(153, 153, 153, 0.2);
+    border-color: rgb(153, 153, 153); 
+}
+
+[data-entity][data-entity="quantity"]::after {
+    background: rgb(153, 153, 153); 
+}
+
+[data-entity][data-entity="ordinal"] {
+    background: rgba(153, 153, 153, 0.2);
+    border-color: rgb(153, 153, 153); 
+}
+
+[data-entity][data-entity="ordinal"]::after {
+    background: rgb(153, 153, 153); 
+}
+
+[data-entity][data-entity="cardinal"] {
+    background: rgba(153, 153, 153, 0.2);
+    border-color: rgb(153, 153, 153); 
+}
+
+[data-entity][data-entity="cardinal"]::after {
+    background: rgb(153, 153, 153); 
+}
+
