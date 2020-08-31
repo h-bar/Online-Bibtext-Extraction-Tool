@@ -93,8 +93,8 @@ export const ClassificationDisplay = props => {
 };
 
 
-
-const server_addr = "http://127.0.0.1:5000"
+// IP address of the server
+const server_addr = "http://vinci8:5000"
 // vinci8:5000
 export async function postReq(endPoint, data) {
   let url = server_addr + endPoint
