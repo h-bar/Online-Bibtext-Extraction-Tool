@@ -3,8 +3,8 @@ import ReactModal from 'react-modal';
 
 
 export const TextInput = props => (
-  <div className="row h-100">
-    <textarea class="form-control" id="exampleFormControlTextarea4" 
+  <div class="form-group">
+    <textarea class="form-control" id="exampleFormControlTextarea4" rows="6" style={{fontSize:"15px"}}
       // className="col-12"
       value={props.placeholder}
       onChange={e => props.onChange(e.target.value)}
@@ -44,7 +44,9 @@ export const ClassificationDisplay = props => {
 
   if (props.result === null) return null
   let result = props.result
-  let byLabel = []
+  let byLabel = {}
+  console.log(result.tokens)
+  console.log(result.labels)
   for (let i in result.tokens) {
     let t = result.tokens[i]
     let l = result.labels[i]
@@ -53,15 +55,44 @@ export const ClassificationDisplay = props => {
         l = l.slice(2)
       }
     }
-    byLabel.push(<mark key={i+'-'+t} className="btn text-dark btn-sm" data-entity={l} onClick={() => setSelectedIdx(i)}>{t}</mark>)
+    if (byLabel[l] === undefined) byLabel[l] = []
+    if (l === 'author') 
+    {
+      if (i>0){
+        let curr_l = result.labels[i]
+        console.log("begin")
+        console.log(i)
+        console.log(curr_l)
+        console.log(result.tokens[i])
+        if (result.labels[i]==="B-author"){
+          byLabel[l].push(<a key={i+'-'+t+'and'} className="text-dark" >{"and"} </a>)
+        }
+      }
+    }
+    byLabel[l].push(<a key={i+'-'+t} className="text-dark" onClick={() => setSelectedIdx(i)}>{t} </a>)
+  }
+  console.log(byLabel["author"])
+
+  const ordered_label = ['abstract', 'address', 'advisor', 'annote', 'author', 'bookeditor', 'bookpages', 'booktitle', 'category', 'chapter', 'city', 'collaboration', 'comment', 'date', 'day', 'edition', 'editor', 'eprint', 'foreword', 'howpublished', 'institution', 'issue', 'journal', 'key', 'keyword', 'location', 'meeting', 'month', 'note', 'number', 'numpages', 'O', 'organization', 'pages', 'paper', 'price', 'primaryclass', 'private', 'publisher', 'school', 'series', 'size', 'title', 'translator', 'type', 'url', 'urldate', 'version', 'volume', 'year']
+  let labelRows = []
+
+  for (let i in ordered_label) {
+    let l = ordered_label[i]
+    if (l!=="O")
+    {
+      if (byLabel[l] !== undefined){
+        labelRows.push(<div key={l}>{ l + ' = {' } {byLabel[l]} {'}'} </div>)
+      }
+    }
+  }
+  if (byLabel["O"] !== undefined){
+    labelRows.push(<div key={"O"}>{ 'unlabeled = {' } {byLabel["O"]} {'}'} </div>)
   }
 
-  let labelRows = []
-  labelRows.push(<h4 class="entities" key={0}> {byLabel} </h4>)
 
   return (
-    <div>
-      <div className='row mb-5'>
+    <div className='col-sm-12 col-md-6 col-lg-3'>
+      <div className='mb-3' style={{fontSize:"10pt"}}>
           {labelRows}
       </div>
       
@@ -94,7 +125,8 @@ export const ClassificationDisplay = props => {
 
 
 // IP address of the server
-const server_addr = "http://vinci8:5000"
+const server_addr = "http://localhost:5000"
+// "http://vinci8:5000"
 // vinci8:5000
 export async function postReq(endPoint, data) {
   let url = server_addr + endPoint

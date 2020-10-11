@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { selectResults } from "../slice";
 import { demofiDownloads } from "../../config";
-import { MDBIcon} from "mdbreact";
+import { MDBBtn, MDBIcon} from "mdbreact";
 
 const DownloadBtn = props => (
   <a href={"data:text/json;charset=utf-8," + props.downloadString} download={props.label + ".json"} className={props.className}>
@@ -19,6 +19,9 @@ export const Download = props => {
 
   return (
     <div className="w-100 text-center">
+      <div className="w-100 text-center mb-3">
+        <MDBBtn id="mddbbtn" gradient="aqua" rounded="true" ><MDBIcon icon="desktop" /> Recompute</MDBBtn>
+        </div>
       { downloadBtns }
     </div>
   )

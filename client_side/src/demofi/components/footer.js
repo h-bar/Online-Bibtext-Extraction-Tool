@@ -7,13 +7,13 @@ export const Footer = () => (
 
 <div class="container-fluid text-center text-md-left">
 
-<h2 class="card-title h1-responsive pt-3 mb-5 text-center"><strong> <MDBIcon icon="atom" /> Neural Model</strong></h2>
+<h2 class="card-title h2-responsive pt-3 mb-4 text-center"><strong> <MDBIcon icon="atom" /> Neural Model</strong></h2>
   <div class="text-center">
     <p class="text-center">This academic citation parser uses RoBERTa-based NER model introduced in “Using BIBTEX to Automatically Generate Labeled Data for Citation Field Extraction”. This model is trained on 5 million citation strings in various domains and formats. It achieves state of art performance on UMass CFE dataset and domain specific dataset. In comparison to previous SoTA, it achieves a 24.48% relative error reduction, achieving span level F1-scores of 96.3%.</p>
   </div>
 
 
-<h2 class="card-title h1-responsive pt-3 mb-5 text-center"><strong><MDBIcon icon="book-open" /> Format</strong></h2>
+<h2 class="card-title h2-responsive pt-3 mb-4 text-center"><strong><MDBIcon icon="book-open" /> Format</strong></h2>
   <div class="row">
 
     
@@ -49,7 +49,7 @@ export const Footer = () => (
   </div>
 
 
-  <h2 class="card-title h1-responsive pt-3 mb-5 text-center"><strong><MDBIcon far icon="clone" /> Example</strong></h2>
+  <h2 class="card-title h2-responsive pt-3 mb-4 text-center"><strong><MDBIcon far icon="clone" /> Example</strong></h2>
   <div class="row">
 
     

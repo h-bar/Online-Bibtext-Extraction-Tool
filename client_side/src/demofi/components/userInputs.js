@@ -11,13 +11,13 @@ export const UserInputs = () => {
 
   return (
     <div>
-      <div style={{ height: "400px"}} className="mb-4 px-4">
+      <div  className="mb-2 px-4">
         <TextInput
           onChange={value => dispatch(updateData(value))}
           placeholder={data}
         />
       </div>
-      <div className="mb-4">
+      <div className="mb-2">
         <OptionBtnInput
           onSelect={value => dispatch(updateParam(value))}
           options={demofiConfig.actions}
