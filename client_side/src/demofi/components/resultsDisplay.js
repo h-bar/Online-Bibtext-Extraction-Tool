@@ -13,7 +13,7 @@ export const ResultsDisplay = () => {
     resDispaly.push(<ClassificationDisplay key={i} labels={demofiConfig.availableLabels} result={results[i]} onEdit={(idx, label) => dispatch(updateResult({resIdx: i, labelIdx: idx, label: label}))}/>)
   }
   return (
-    <div className="px-4">
+    <div className="px-4 row">
       {resDispaly}
     </div>
   );

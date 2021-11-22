@@ -28,7 +28,7 @@ export const Submit = () => {
   if (state === "loading"){
     return (
       <div className="row justify-content-center mb-4">
-        <MDBBtn id="mddbbtn" gradient="peach" rounded="true" size="lg"><MDBIcon icon="cloud-upload-alt" /> processing ...</MDBBtn>
+        <MDBBtn id="mddbbtn" gradient="peach" rounded="true" ><MDBIcon icon="cloud-upload-alt" /> processing ...</MDBBtn>
         {/* <button className="btn btn-lg btn-warning mb-5 mx-2" onClick={() => dispatch(reset())}>Reset</button> */}
       </div>
     );
@@ -36,7 +36,7 @@ export const Submit = () => {
   }
     return (
       <div className="row justify-content-center mb-4">
-        <MDBBtn id="mddbbtn" gradient="aqua" rounded="true" size="lg" onClick={handleSubmit}><MDBIcon icon="magic" className="mr-1" /> Get Tagging</MDBBtn>
+        <MDBBtn id="mddbbtn" gradient="aqua" rounded="true" onClick={handleSubmit}><MDBIcon icon="magic" className="mr-1" /> Get Tagging</MDBBtn>
         {/* <button className="btn btn-lg btn-warning mb-5 mx-2" onClick={() => dispatch(reset())}>Reset</button> */}
       </div>
     );

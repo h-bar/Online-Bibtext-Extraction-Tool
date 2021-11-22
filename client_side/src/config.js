@@ -10,7 +10,7 @@ export const demofiConfig = {
 // Transform function returns the string that will be downloaded
 export const demofiDownloads = [
   {
-    className: "btn btn-lg btn-outline-info mb-5 mx-2",
+    className: "btn btn-outline-info mb-5 mx-2",
     label: "BIBTEX",
     transform: (data) => {
       var output = "";
@@ -55,7 +55,7 @@ export const demofiDownloads = [
     } 
   },
   {
-    className: "btn btn-lg btn-outline-danger mb-5 mx-2",
+    className: "btn btn-outline-danger mb-5 mx-2",
     label: "RIS",
     transform: (data) => {
       var bib2ris = {"author": "AU",
@@ -111,7 +111,7 @@ export const demofiDownloads = [
     } 
   },
   {
-    className: "btn btn-lg btn-outline-primary mb-5 mx-2",
+    className: "btn btn-outline-primary mb-5 mx-2",
     label: "JSON",
     transform: (data) => {
       return JSON.stringify(data)

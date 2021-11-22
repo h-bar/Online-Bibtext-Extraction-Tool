@@ -23,7 +23,7 @@ const demofiSlice = createSlice({
       state.param = action.payload;
     },
     updateResult: (state, action) => {
-      state.resp[action.payload.resIdx].result.labels = state.resp[action.payload.resIdx].result.labels.map((label, idx) => {
+      state.resp[action.payload.resIdx].labels = state.resp[action.payload.resIdx].labels.map((label, idx) => {
         if(idx === parseInt(action.payload.labelIdx)) { return action.payload.label }
         else { return label}
       })
